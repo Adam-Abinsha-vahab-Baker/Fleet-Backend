@@ -1,0 +1,315 @@
+
+/* Existing CSS Styles */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+    background-color: black;
+    color: white;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); 
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #444;
+    padding: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); 
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px 10px;
+    transition: 0.3s ease;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+    background-color: #555; 
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 220px; 
+    background-color: #222;
+    padding: 20px;
+    min-height: 100vh;
+    display: none; 
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 15px; 
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s ease;
+    padding: 8px;
+    display: block;
+    border-radius: 4px; 
+}
+
+.sidebar ul li a:hover {
+    background-color: #444;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+.card {
+    width: 160px;
+    height: 160px;
+    background-color: #555;
+    display: inline-block;
+    margin: 10px;
+    border-radius: 15px; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    overflow: hidden;
+    text-align: center;
+    justify-content: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+}
+
+.card a {
+    text-decoration: none; 
+    color: inherit; 
+    display: block;
+    width: 100%; 
+    height: 100%; 
+    padding: 10px;
+    background-color: #555; 
+    line-height: 140px; 
+    color: white; 
+    border-radius: 15px; 
+}
+
+.card:hover {
+    box-shadow: 0 0 20px white; 
+}
+
+.card a:hover {
+    background-color: #555; 
+    color: white; 
+    box-shadow: none; 
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: 400;
+    text-align: center;
+}
+
+h3 {
+    font-size: 15px;
+    text-align: center;
+    position: relative;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    animation: glowText 1.5s ease-in-out forwards;
+}
+
+h2 {
+    font-size: 80px;
+    text-align: center;
+    position: relative;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
+    background-clip: text;
+    color: transparent;
+    background-size: 200% 100%; /* To allow the background gradient to move */
+    animation: glow-left-to-right 4s ease ; 
+    margin-bottom: 20px;
+}
+
+@keyframes glow-left-to-right {
+    0% {
+        background-position: 200% 0; /* Start from the left */
+    }
+    100% {
+        background-position: -200% 0; /* Move to the right */
+    }
+}
+
+@keyframes glowText {
+    0% {
+        opacity: 0;
+        text-shadow: none;
+    }
+    100% {
+        opacity: 1;
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+    }
+}
+
+.form-container {
+    width: 400px;
+    margin: 20px auto; 
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+.form-input {
+    background-color: #333;
+    border: none;
+    padding: 10px;
+    color: white;
+    width: calc(100% - 20px);
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.form-input::placeholder {
+    color: #bbb; 
+}
+
+.form-button {
+    background-color: #555;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.form-button:hover {
+    background-color: #777;
+    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.7);
+}
+
+.dialog-box {
+    background-color: #222;
+    padding: 20px;
+    border: 1px solid #444;
+    width: 300px;
+    margin: 0 auto;
+    display: none;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    z-index: 1000;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+    z-index: 999;
+}
+
+.form-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; 
+}
+
+.form-container {
+    flex: 1; 
+    width: 45%; 
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    min-width: 350px;
+}
+
+/* Additional styles for trip details table */
+.trip-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    overflow-x: auto;
+}
+
+.trip-table th, .trip-table td {
+    border: 1px solid #555;
+    padding: 10px;
+    text-align: left;
+}
+
+.trip-table th {
+    background-color: #444;
+}
+
+.trip-table tr:nth-child(even) {
+    background-color: #333;
+}
+
+.trip-table tr:hover {
+    background-color: #555;
+}
+
+.trip-details {
+    overflow-x: auto;
+}
+.enquiry-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    overflow-x: auto;
+}
+
+.enquiry-table th, .enquiry-table td {
+    border: 1px solid #555;
+    padding: 10px;
+    text-align: left;
+}
+
+.enquiry-table th {
+    background-color: #444;
+}
+
+.enquiry-table tr:nth-child(even) {
+    background-color: #333;
+}
+
+.enquiry-table tr:hover {
+    background-color: #555;
+}
