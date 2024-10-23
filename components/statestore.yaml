@@ -1,0 +1,10 @@
+apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: statestore
+spec:
+  type: state.mongoDB
+  version: v1
+  metadata:
+    - name: connectionString
+      value: "mongodb+srv://abinshavahab:Qso0juNbOei0hAlR@fleet.h3ege.mongodb.net/trip_management?retryWrites=true&w=majority&appName=fleet&tls=true"

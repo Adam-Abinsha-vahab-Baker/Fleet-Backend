@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fleet Management</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</head>
+<body>
+    <header>
+        <h1>
+            <span class="material-symbols-outlined">
+                hail
+            </span> 
+            Fleet Management
+        </h1>
+        <h3>Backend Application | Designed and Developed by Adam Abinsha Vahab</h3>
+    </header>
+
+    <!-- Navigation (commented out) -->
+    <!-- <nav>...</nav> -->
+
+    <div class="container">
+        <div class="sidebar" id="sidebar">
+            <ul id="submenu-list">
+                <!-- Submenu items will be injected here -->
+            </ul>
+        </div>
+        <div class="content" id="content">
+            <h2>
+                <span class="material-symbols-outlined" style="font-size: 80px;">
+                    digital_wellbeing
+                </span>
+                Welcome
+            </h2>
+            <h3>This is a backend server, kindly make the React frontend and call this through it.</h3>
+            <h3>The localhost is already set to 5000; just run the frontend and use the click cards to access it.</h3>
+            <h3>Please note that the database used cannot be accessed through your machine's IP. You can either create a MongoDB cluster and create the databases with the same name or you can give your IP, so I can give permission in the MongoDB Atlas.</h3>
+
+            <!-- Added Instructions Button and Text -->
+            <button id="instructionsButton" class="form-button">Instructions</button>
+            <h3>Click to see the installation instructions</h3>
+        </div>
+    </div>
+
+    <!-- Overlay for the dialog -->
+    <div id="overlay" class="overlay" onclick="closeAllModals()"></div>
+
+    <!-- Trip Details Modal -->
+    <div id="tripModal" class="dialog-box" style="display: none; width: 600px;">
+        <h3>Trip Details</h3>
+        <div id="tripModalContent">
+            <!-- Trip details will be injected here -->
+        </div>
+        <button class="form-button" type="button" onclick="closeTripModal()">Close</button>
+    </div>
+
+    <!-- Instructions Modal -->
+    <div id="instructionsModal" class="dialog-box" style="display: none; width: 600px;">
+        <h3>Installation Instructions</h3>
+        <div id="instructionsContent">
+            <p>To clone the repository and run the React frontend app, follow these steps:</p>
+            <ol>
+                <li>Open your terminal and navigate to the directory where you want to clone the repo.</li>
+                <li>Run <code>git clone https://github.com/Adam-Abinsha-vahab-Baker/React-Frontend.git</code></li>
+                <li>Navigate into the cloned repository with <code>cd your-repo-name</code></li>
+                <li>Install the dependencies with <code>npm install</code></li>
+                <li>Start the React app with <code>npm start</code></li>
+            </ol>
+            <p><strong>Database Instructions:</strong></p>
+            <ul>
+                <li>The connection string for the MongoDB database can be found in the <code>.env</code> file (which I am not going to <code>gitignore</code>).</li>
+                <li>If you are using the default database, you must share your machine IP with me, so I can allow access on the MongoDB website.</li>
+                <li>If you are going to create a database yourself, make sure to replace it with your MongoDB connection string.</li>
+                <li>The database name should be <code>trip_management</code>.</li>
+                <li>In the database, there should be two collections:
+                    <ul>
+                        <li><code>customers</code></li>
+                        <li><code>trips</code></li>
+                    </ul>
+                </li>
+                <li>I highly recommend the first option (sharing your IP) to avoid complications.</li>
+            </ul>
+        </div>
+        <button class="form-button" type="button" onclick="closeInstructionsModal()">Close</button>
+    </div>
+</body>
+</html>
